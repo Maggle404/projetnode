@@ -64,6 +64,3 @@ exports.delete = async(res, res)=>{
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
-
-
-

@@ -4,10 +4,7 @@ const utilisateurController = require('../controllers/utilisateurController');
 
 Route.get('/getUtilisateurs', utilisateurController.getUtilisateurs)
 Route.post('/create', utilisateurController.create)
-Route.post('/edit', utilisateurController.edit)
-Route.post('/delete', utilisateurController.delete)
-
-
-
+Route.put('/edit', utilisateurController.edit)
+Route.delete('/delete', utilisateurController.delete)
 
 module.exports = Route

@@ -20,7 +20,7 @@ exports.getTechno = async (req, res) => {
 }
 
 exports.createTechno = async (req, res) => {
-    const { tech, date, createur } = req.body;
+    const { tech, createur } = req.body;
     try {
         const conn = await pool.getConnection();
         await conn.query('INSERT INTO techno (tech, createur) VALUES (?, ?)', [tech, createur]);
@@ -32,9 +32,9 @@ exports.createTechno = async (req, res) => {
     }
 }
 
-exports.updateTechno = async (req, res) => {
+exports.editTechno = async (req, res) => {
     const id = req.params.id;
-    const { tech, date, createur } = req.body;
+    const { tech, createur } = req.body;
     try {
         const conn = await pool.getConnection();
         await conn.query('UPDATE techno SET tech = ?, createur = ? WHERE id = ?', [tech, createur, id]);

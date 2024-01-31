@@ -48,7 +48,7 @@ exports.edit = async(req, res)=>{
     }
 }
 
-exports.delete = async(res, res)=>{
+exports.delete = async(req, res)=>{
     const id = req.params.id;
     try {
         const conn = await pool.getConnection();
